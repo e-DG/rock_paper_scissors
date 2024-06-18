@@ -4,17 +4,17 @@ let computerScore = 0;
 let humanScore = 0;
 // let humanChoice = getHumanChoice();
 // let computerChoice = getComputerChoice();
-
+// 
 function getComputerChoice(){
    let randomChoice = Math.floor(Math.random() * computerChoices.length);
    return computerChoices[randomChoice];
 }
-
+// 
 function getHumanChoice() {
     let humanChoice = prompt("Choose your weapon!");
     return humanChoice.toLowerCase();
 }
-
+// 
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === computerChoice) {
         console.log("There is no winner yet!")
@@ -44,7 +44,7 @@ function playRound(humanChoice, computerChoice) {
         console.log("Computer wins! " + computerChoice + " beats " + humanChoice + ".");
     }
 }
-
+// 
 function anounceWinner(){
     if (humanScore > computerScore){
         alert("The human won the match against the machine!");
@@ -61,18 +61,17 @@ function restartGame(){
     playGame();
 }
 
+// function playGame() {
+//     let i = 1;
+//     let n = 5;
+//     while(i<=n){
+//         playRound(getHumanChoice(), getComputerChoice());
+//         console.log("The scores are: " + humanScore + " points for the human, and " + computerScore + " points for the computer!");
+//         i++;
+//     }
+//     anounceWinner()
+//     restartGame();
+//     i = 1;    
+// }
 
-function playGame() {
-    let i = 1;
-    let n = 5;
-    while(i<=n){
-        playRound(getHumanChoice(), getComputerChoice());
-        console.log("The scores are: " + humanScore + " points for the human, and " + computerScore + " points for the computer!");
-        i++;
-    }
-    anounceWinner()
-    restartGame();
-    i = 1;    
-}
-
-playGame();
+// playGame();
