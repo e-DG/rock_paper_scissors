@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color:darkcyan;
+    background-color:darkslategrey;
     color: gainsboro;
     text-align: center;
 }
@@ -22,7 +22,8 @@ img {
 
 .user-options {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-top: 100px;
 }
 
 .weapon {
@@ -31,9 +32,17 @@ img {
     align-items: center;
     justify-content: center;
     gap: 25px;
-    width: 150px;
-    height: 150px;
+    width: 400px;
+    height: 200px;
     border: 2px solid black;
     border-radius: 25px;
     background-color: bisque;
+}
+
+#restartButton {
+    
+}
+
+.transparent {
+    display: none;
 }
