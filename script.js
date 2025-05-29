@@ -2,8 +2,8 @@
 // Create computer's choice (it works)
 
 let computerChoice;
-
-function ComptChooses() {
+let randomizedHumanChoice;
+function comptChooses() {
     computerChoice = Math.round(Math.random() * 2);
     if (computerChoice === 0) {
         computerChoice = "scissors";
@@ -19,11 +19,12 @@ function ComptChooses() {
     } 
 }
 
-ComptChooses();
-computerChoice;
 
+
+    comptChooses();
 
  function playRound(computerChoice, humanChoice) {
+
      if (humanChoice === "scissors" && computerChoice === "paper" 
         ||humanChoice === "paper" && computerChoice === "rock" 
         ||humanChoice === "rock" && computerChoice === "scissors" ){
@@ -38,4 +39,4 @@ computerChoice;
     }
  }
 
- playRound (computerChoice, "rock");
+ playRound (computerChoice, "scissors" );
