@@ -58,7 +58,7 @@ function comptChooses() {
     }
  }
 
-//  Compare punctuations
+//  Compare punctuations and alert the winner
 
 function alertWinner (computerScore, humanScore) {
     if (computerScore < humanScore) {
