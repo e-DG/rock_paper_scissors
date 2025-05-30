@@ -2,6 +2,8 @@ let computerChoice;
 let computerScore = 0;
 let humanScore = 0;
 
+// This function creates a random choice for the computer one single time
+
 function comptChooses() {
     computerChoice = Math.round(Math.random() * 2);
     if (computerChoice === 0) {
@@ -19,6 +21,7 @@ function comptChooses() {
 }
 
 
+// This function starts one single round 
 
  function playRound(computerChoice, humanChoice) {
 
@@ -40,6 +43,20 @@ function comptChooses() {
     }
  }
 
+ function restartGame () {
+    let restartOption = prompt("Would you like to restart the game?")
+    if (restartOption === "yes") {
+        humanScore = 0;
+        computerScore = 0;
+        playGame()
+    }
+    else {
+        alert("Thank you so much for playing!");
+    }
+ }
+
+// This function plays a game of 5 rounds
+
 function playGame () {
     for (let i = 1; i <= 5; i++) {
         comptChooses(); 
@@ -47,4 +64,5 @@ function playGame () {
         playRound(computerChoice, humanChoice)
         console.log("Round number " + i + ". The score is: Human " + humanScore + " - " + computerScore + " Computer");
     }
+    restartGame ();
 }
