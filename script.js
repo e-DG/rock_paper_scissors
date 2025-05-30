@@ -41,6 +41,7 @@ function comptChooses() {
     else {
         console.log ("Draft")
     }
+    
  }
 
 //  This function asks you about restarting the game
@@ -60,11 +61,11 @@ function comptChooses() {
 //  Compare punctuations
 
 function alertWinner (computerScore, humanScore) {
-    if (computerScore > humanScore) {
-        alert("Computer wins!")
+    if (computerScore < humanScore) {
+        alert("You win!")
     }
     else if (computerScore > humanScore) {
-        alert("You win!");
+        alert("Computer wins!");
     }
     else {
          alert("Draft!");
@@ -76,10 +77,10 @@ function alertWinner (computerScore, humanScore) {
 function playGame () {
     for (let i = 1; i <= 5; i++) {
         comptChooses(); 
-        let humanChoice = prompt("Choose your weapon");
+        let humanChoice = prompt("Choose your weapon (rock, paper, scissors)");
         playRound(computerChoice, humanChoice)
         console.log("Round number " + i + ". The score is: Human " + humanScore + " - " + computerScore + " Computer");
     }
-    alertWinner();
+    alertWinner(computerScore, humanScore);
     restartGame ();
 }
