@@ -43,6 +43,8 @@ function comptChooses() {
     }
  }
 
+//  This function asks you about restarting the game
+
  function restartGame () {
     let restartOption = prompt("Would you like to restart the game?")
     if (restartOption === "yes") {
@@ -55,6 +57,20 @@ function comptChooses() {
     }
  }
 
+//  Compare punctuations
+
+function alertWinner (computerScore, humanScore) {
+    if (computerScore > humanScore) {
+        alert("Computer wins!")
+    }
+    else if (computerScore > humanScore) {
+        alert("You win!");
+    }
+    else {
+         alert("Draft!");
+    }
+}
+
 // This function plays a game of 5 rounds
 
 function playGame () {
@@ -64,5 +80,6 @@ function playGame () {
         playRound(computerChoice, humanChoice)
         console.log("Round number " + i + ". The score is: Human " + humanScore + " - " + computerScore + " Computer");
     }
+    alertWinner();
     restartGame ();
 }
